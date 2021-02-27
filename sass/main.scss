@@ -8,9 +8,13 @@
 
 .footer {
     &-inner {
+        
         display: flex;
         justify-content: space-between;
         &-block {
+            display: flex;
+            flex-direction: column;
+
             a {
                 img {
                     width: 200px;
@@ -22,14 +26,6 @@
                 }
             }
         }
-        &-block {
-
-        }
-        &-block {
-
-        }
-        &-block {
-
-        }
+        
     }
 } 
