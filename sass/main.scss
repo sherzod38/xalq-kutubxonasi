@@ -8,14 +8,27 @@
 
 .footer {
     &-inner {
-        
+
         display: flex;
         justify-content: space-between;
+        @media screen and (max-width: 576px) {
+            display: flex;
+            flex-direction: column;
+        }
         &-block {
             display: flex;
             flex-direction: column;
 
             a {
+                text-decoration: none;
+                margin-bottom: 20px;
+                transition: all ease 0.5s;
+                &:hover {
+                    color: #000;
+                    transform: translate(15px);
+                    background-color: bisque;
+                    border-radius: 24px;
+                }
                 img {
                     width: 200px;
                     height: 100px;
