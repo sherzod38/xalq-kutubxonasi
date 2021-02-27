@@ -1,0 +1,35 @@
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+    box-sizing: border-box;
+}
+
+.footer {
+    &-inner {
+        display: flex;
+        justify-content: space-between;
+        &-block {
+            a {
+                img {
+                    width: 200px;
+                    height: 100px;
+                    // object-fit: ;
+                    border: 1px solid #000;
+                    border-radius: 7px;
+
+                }
+            }
+        }
+        &-block {
+
+        }
+        &-block {
+
+        }
+        &-block {
+
+        }
+    }
+} 
