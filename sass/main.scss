@@ -5,18 +5,19 @@
     padding: 0 15px;
     box-sizing: border-box;
 }
-.teli {
-    content: '';
-    position: absolute;
-    background-image: url('../sass/images/icons/telephone.svg');
-    left: 0;
+// .teli {
+//     content: '';
+//     // position: absolute;
+//     background-image: url('../sass/images/icons/telephone.svg');
+//     left: 0;
     
-    background-size: contain;
-    width: 30px;
-    height: 30px;
-}
+//     background-size: contain;
+//     width: 30px;
+//     height: 30px;
+// }
 
 .footer {
+    background-color: aliceblue;
     &-inner {
         // footer 
         display: flex;
@@ -28,6 +29,21 @@
         &-block {
             display: flex;
             flex-direction: column;
+            .teli {
+                position: relative;
+                &::after{
+                    content: "";
+                    background-image: url('./images/icons/telephone.svg');
+                    position: absolute;
+                    width: 20px;
+                    height: 20px;
+                    padding-left: 25px;
+                    background-repeat: no-repeat;
+                    right: 0px;
+
+
+                }
+            }
            
 
             a {
