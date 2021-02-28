@@ -6,6 +6,16 @@
           box-sizing: border-box;
 }
 
+.teli {
+  content: '';
+  position: absolute;
+  background-image: url("../sass/images/icons/telephone.svg");
+  left: 0;
+  background-size: contain;
+  width: 30px;
+  height: 30px;
+}
+
 .footer-inner {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -42,19 +52,21 @@
   margin-bottom: 20px;
   -webkit-transition: all ease 0.5s;
   transition: all ease 0.5s;
+  color: #000;
+  font-weight: bold;
 }
 
 .footer-inner-block a:hover {
   color: #000;
   -webkit-transform: translate(15px);
           transform: translate(15px);
-  background-color: bisque;
+  background-color: #e4e3e2;
   border-radius: 24px;
 }
 
 .footer-inner-block a img {
-  width: 200px;
-  height: 100px;
+  width: 300px;
+  height: 150px;
   border: 1px solid #000;
   border-radius: 7px;
 }
