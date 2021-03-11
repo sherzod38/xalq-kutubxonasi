@@ -16,17 +16,16 @@ body {
 }
 
 .header-top img {
-  width: 200px;
-  height: 100px;
+  width: 150px;
+  height: 70px;
   border: 1px solid #000;
   border-radius: 7px;
-  margin-bottom: 20px;
-  margin-top: 20px;
+  margin-bottom: 10px;
+  margin-top: 10px;
 }
 
 .header-midl {
-  background-color: lime;
-  padding: 20px 0;
+  background-color: #27AE61;
 }
 
 .header-midl-nav {
@@ -35,6 +34,9 @@ body {
   display: flex;
   -ms-flex-pack: distribute;
       justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 @media screen and (max-width: 576px) {
@@ -55,25 +57,43 @@ body {
 .header-midl-nav-link {
   text-decoration: none;
   font-size: 28px;
-  padding: 5px 10px;
+  padding: 15px 10px;
 }
 
 .header-midl-nav-link:hover {
-  background-color: #05c905;
+  background-color: #229955;
   border-radius: 7px;
 }
 
 .header-midl-nav-search {
   cursor: pointer;
-  padding: 5px 50px;
-  background-color: lime;
+  padding: 30px 100px;
+  background-color: #27AE61;
   border: none;
+  outline: none;
   border-radius: 16px;
   font-size: 28px;
 }
 
+.header-midl-nav-search {
+  background-image: url("./images/icons/loupe.svg");
+  background-repeat: no-repeat;
+  background-size: contain;
+  width: 25px;
+  height: 25px;
+  left: 0;
+  top: 15px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
 .header-midl-nav-search:hover {
   background-color: #04cf04;
+  padding: 30px 100px;
 }
 
 .wrapper {
