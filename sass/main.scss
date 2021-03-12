@@ -2,6 +2,12 @@ body {
     margin: 0;
     padding: 0;
 }
+
+h1, h2, h3, h4, h5, h6, p {
+    margin: 0;
+    padding: 0;
+}
+
 .container {
     max-width: 1200px;
     margin: 0 auto;
@@ -91,6 +97,72 @@ body {
     }
     &-bottom {
 
+    }
+}
+
+.section1 {
+    background: url('./images/bg_brick.jpg'); 
+    display: flex;
+    justify-content: space-around;
+    @media screen and (max-width: 576px) {
+        display: flex;
+        flex-direction: column;
+    }
+    .wrapper2{
+        h2 {
+            padding-top: 20px;
+            width: 350px;
+            text-align: center;
+            color: rgb(31, 31, 168);
+            @media screen and (max-width: 576px) {
+                display: flex;
+                flex-direction: column;
+                width: 300px;
+            }
+        }
+        p {
+            @media screen and (max-width: 576px) {
+                display: flex;
+                flex-direction: column;
+                width: 300px;
+                
+            }
+            width: 600px;
+            font-size: 20px;
+            font-weight: bolder;
+            padding-left: 15px;
+            // padding-bottom: 15px;
+            margin-bottom: 20px;
+            color: rgb(26, 26, 165);
+            span {
+                color: rgb(38, 0, 255);
+            }
+    
+        }
+    }
+    .wrapper3 {
+        @media screen and (max-width: 576px) {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+    
+
+        video {
+            width: 450px;
+            height: 450px;
+            @media screen and (max-width: 576px) {
+                display: flex;
+                margin: auto;
+                justify-content: center;
+                
+                width: 330px;
+                height: 330px;
+            }
+        
+            
+
+        }
     }
 }
 

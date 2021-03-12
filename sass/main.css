@@ -3,6 +3,11 @@ body {
   padding: 0;
 }
 
+h1, h2, h3, h4, h5, h6, p {
+  margin: 0;
+  padding: 0;
+}
+
 .container {
   max-width: 1200px;
   margin: 0 auto;
@@ -94,6 +99,107 @@ body {
 .header-midl-nav-search:hover {
   background-color: #04cf04;
   padding: 30px 100px;
+}
+
+.section1 {
+  background: url("./images/bg_brick.jpg");
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+@media screen and (max-width: 576px) {
+  .section1 {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
+
+.section1 .wrapper2 h2 {
+  padding-top: 20px;
+  width: 350px;
+  text-align: center;
+  color: #1f1fa8;
+}
+
+@media screen and (max-width: 576px) {
+  .section1 .wrapper2 h2 {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    width: 300px;
+  }
+}
+
+.section1 .wrapper2 p {
+  width: 600px;
+  font-size: 20px;
+  font-weight: bolder;
+  padding-left: 15px;
+  margin-bottom: 20px;
+  color: #1a1aa5;
+}
+
+@media screen and (max-width: 576px) {
+  .section1 .wrapper2 p {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    width: 300px;
+  }
+}
+
+.section1 .wrapper2 p span {
+  color: #2600ff;
+}
+
+@media screen and (max-width: 576px) {
+  .section1 .wrapper3 {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+}
+
+.section1 .wrapper3 video {
+  width: 450px;
+  height: 450px;
+}
+
+@media screen and (max-width: 576px) {
+  .section1 .wrapper3 video {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    margin: auto;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    width: 330px;
+    height: 330px;
+  }
 }
 
 .wrapper {
