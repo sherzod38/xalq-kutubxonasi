@@ -9,6 +9,12 @@ body {
     padding: 0;
     font-family: sans-serif;
 }
+
+h1, h2, h3, h4, h5, h6, p {
+    margin: 0;
+    padding: 0;
+}
+
 .container {
     max-width: 1200px;
     margin: 0 auto;
@@ -25,25 +31,39 @@ body {
 //     width: 30px;
 //     h
 .header {
+<<<<<<< HEAD
     background: url('./images/bg_brick.jpg');
+=======
+    background: url('./images/bg_brick.jpg'); 
+    // position: fixed;
+>>>>>>> 060b7414da049fd8923ddae515271d3b7ec942c0
     &-top {
         img {
-            width: 200px;
-            height: 100px;
+            width: 150px;
+            height: 70px;
             // object-fit: contain;
             border: 1px solid #000;
             border-radius: 7px;
+<<<<<<< HEAD
             margin-bottom: 20px;
             margin-top: 20px;
 
+=======
+            margin-bottom: 10px;
+            margin-top: 10px;
+    
+>>>>>>> 060b7414da049fd8923ddae515271d3b7ec942c0
         }
     }
     &-midl {
-        background-color: rgb(0, 255, 0);
-        padding: 20px 0;
+        background-color: #27AE61;
+        // position: fixed;
+        // padding: 20px 0;
+        // height: 60px;
         &-nav {
             display: flex;
             justify-content: space-around;
+            align-items: center;
             @media screen and (max-width: 576px) {
                 display: flex;
                 flex-direction: column;
@@ -52,23 +72,57 @@ body {
            &-link {
                text-decoration: none;
                font-size: 28px;
-               padding: 5px 10px;
+               padding: 15px 10px;
                &:hover {
+<<<<<<< HEAD
                    background-color: rgb(5, 201, 5);
+=======
+                   background-color: #229955; 
+>>>>>>> 060b7414da049fd8923ddae515271d3b7ec942c0
                    border-radius: 7px;
 
                }
             }
            &-search {
+<<<<<<< HEAD
                cursor: pointer;
                padding: 5px 50px;
                background-color: rgb(0, 255, 0);
                border: none;
             //    outline: none;
                border-radius: 16px;
+=======
+               cursor: pointer; 
+               padding: 30px 100px;
+               background-color: #27AE61;
+               border: none;
+               outline: none;
+               border-radius: 16px; 
+>>>>>>> 060b7414da049fd8923ddae515271d3b7ec942c0
                font-size: 28px;
+            //    position: relative;
+               & {
+                //    position: absolute;
+                   background-image: url('./images/icons/loupe.svg');
+                   background-repeat: no-repeat;
+                   background-size: contain;
+                   width: 25px;
+                   height: 25px;
+                   left: 0;
+                   top: 15px; 
+                   display: flex;
+                   align-items: center;
+
+
+
+               }
                &:hover {
+<<<<<<< HEAD
                 background-color: rgb(4, 207, 4);
+=======
+                background-color: rgb(4, 207, 4); 
+                padding: 30px 100px;
+>>>>>>> 060b7414da049fd8923ddae515271d3b7ec942c0
                }
 
 
@@ -305,6 +359,75 @@ body {
                     transform: rotate(180deg);
                 }
             }
+        }
+    }
+}
+
+.section1 {
+    background: url('./images/bg_brick.jpg'); 
+    display: flex;
+    justify-content: space-around;
+    @media screen and (max-width: 576px) {
+        display: flex;
+        flex-direction: column;
+    }
+    .wrapper2{
+        h2 {
+            padding-top: 20px;
+            width: 350px;
+            text-align: center;
+            color: rgb(31, 31, 168);
+            @media screen and (max-width: 576px) {
+                display: flex;
+                flex-direction: column;
+                width: 300px;
+            }
+        }
+        p {
+            @media screen and (max-width: 576px) {
+                display: flex;
+                flex-direction: column;
+                width: 300px;
+                
+            }
+            width: 600px;
+            font-size: 20px;
+            font-weight: bolder;
+            padding-left: 15px;
+            // padding-bottom: 15px;
+            margin-bottom: 20px;
+            color: rgb(26, 26, 165);
+            span {
+                color: rgb(38, 0, 255);
+            }
+    
+        }
+    }
+    .wrapper3 {
+        @media screen and (max-width: 576px) {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+    
+
+        video {
+            // width: 450px;
+            // height: 450px;
+            border: none;
+            outline: none;
+            @media screen and (max-width: 576px) {
+                display: flex;
+                margin: auto;
+                justify-content: center;
+                
+                width: 330px;
+                height: 330px;
+            }
+           
+            
+            
+
         }
     }
 }
