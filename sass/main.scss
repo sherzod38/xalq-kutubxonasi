@@ -25,6 +25,7 @@ h1, h2, h3, h4, h5, h6, p {
 //     h
 .header {
     background: url('./images/bg_brick.jpg'); 
+    
     // position: fixed;
     &-top {
         img {
@@ -104,16 +105,18 @@ h1, h2, h3, h4, h5, h6, p {
     background: url('./images/bg_brick.jpg'); 
     display: flex;
     justify-content: space-around;
+    padding-top: 20px;
     @media screen and (max-width: 576px) {
         display: flex;
         flex-direction: column;
     }
     .wrapper2{
         h2 {
-            padding-top: 20px;
+            
             width: 350px;
             text-align: center;
             color: rgb(31, 31, 168);
+            margin-bottom: 20px;
             @media screen and (max-width: 576px) {
                 display: flex;
                 flex-direction: column;
@@ -151,6 +154,7 @@ h1, h2, h3, h4, h5, h6, p {
         video {
             // width: 450px;
             // height: 450px;
+            
             border: none;
             outline: none;
             @media screen and (max-width: 576px) {
@@ -192,6 +196,9 @@ h1, h2, h3, h4, h5, h6, p {
             display: flex;
             flex-direction: column;
         }
+        h2 {
+            margin-bottom: 20px;
+        }
         &-inner {
             // width: 300px;
             display: flex; 
@@ -216,9 +223,7 @@ h1, h2, h3, h4, h5, h6, p {
                 transform: rotateZ(-45deg);
 
             }
-            p {
-
-            }
+            
         }
     }
 }

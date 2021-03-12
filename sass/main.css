@@ -108,6 +108,7 @@ h1, h2, h3, h4, h5, h6, p {
   display: flex;
   -ms-flex-pack: distribute;
       justify-content: space-around;
+  padding-top: 20px;
 }
 
 @media screen and (max-width: 576px) {
@@ -123,10 +124,10 @@ h1, h2, h3, h4, h5, h6, p {
 }
 
 .section1 .wrapper2 h2 {
-  padding-top: 20px;
   width: 350px;
   text-align: center;
   color: #1f1fa8;
+  margin-bottom: 20px;
 }
 
 @media screen and (max-width: 576px) {
@@ -184,9 +185,8 @@ h1, h2, h3, h4, h5, h6, p {
 }
 
 .section1 .wrapper3 video {
-  width: 450px;
-  height: 450px;
   border: none;
+  outline: none;
 }
 
 @media screen and (max-width: 576px) {
@@ -251,6 +251,10 @@ h1, h2, h3, h4, h5, h6, p {
         -ms-flex-direction: column;
             flex-direction: column;
   }
+}
+
+.last-section_block h2 {
+  margin-bottom: 20px;
 }
 
 .last-section_block-inner {
