@@ -149,8 +149,10 @@ h1, h2, h3, h4, h5, h6, p {
     
 
         video {
-            width: 450px;
-            height: 450px;
+            // width: 450px;
+            // height: 450px;
+            border: none;
+            outline: none;
             @media screen and (max-width: 576px) {
                 display: flex;
                 margin: auto;
@@ -159,7 +161,8 @@ h1, h2, h3, h4, h5, h6, p {
                 width: 330px;
                 height: 330px;
             }
-        
+           
+            
             
 
         }
