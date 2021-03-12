@@ -1,6 +1,13 @@
+html { box-sizing: border-box; }
+
+*,
+*:before,
+*:after { box-sizing: inherit; }
+
 body {
     margin: 0;
     padding: 0;
+    font-family: sans-serif;
 }
 .container {
     max-width: 1200px;
@@ -13,12 +20,12 @@ body {
 //     // position: absolute;
 //     background-image: url('../sass/images/icons/telephone.svg');
 //     left: 0;
-    
+
 //     background-size: contain;
 //     width: 30px;
 //     h
 .header {
-    background: url('./images/bg_brick.jpg'); 
+    background: url('./images/bg_brick.jpg');
     &-top {
         img {
             width: 200px;
@@ -28,7 +35,7 @@ body {
             border-radius: 7px;
             margin-bottom: 20px;
             margin-top: 20px;
-    
+
         }
     }
     &-midl {
@@ -47,29 +54,258 @@ body {
                font-size: 28px;
                padding: 5px 10px;
                &:hover {
-                   background-color: rgb(5, 201, 5); 
+                   background-color: rgb(5, 201, 5);
                    border-radius: 7px;
 
                }
-            } 
+            }
            &-search {
-               cursor: pointer; 
+               cursor: pointer;
                padding: 5px 50px;
                background-color: rgb(0, 255, 0);
                border: none;
             //    outline: none;
-               border-radius: 16px; 
+               border-radius: 16px;
                font-size: 28px;
                &:hover {
-                background-color: rgb(4, 207, 4); 
+                background-color: rgb(4, 207, 4);
                }
 
 
-           } 
+           }
         }
     }
     &-bottom {
+        .slider-holder {// Slider
+            height: 500px;
+            &:hover {
+                .slick-arrow {
+                    opacity: 0.5;
+                }
+            }
+            .slider-item {
+                display: flex;
+                align-items: center;
+                justify-content: space-around;
+                height: 500px;
+                padding: 25px;
+                overflow: hidden;
+                .caption {
+                    color: #333;
+                    margin-top: -80px;
+                    text-transform: uppercase;
+                    .title {
+                        color: #27ae61;
+                        font-size: 38px;
+                        line-height: 39px;
+                    }
+                    .midtitle {
+                        margin-left: 20px;
+                        font-size: 26px;
+                    }
+                    .subtitle {
+                        margin-left: 60px;
+                        font-size: 26px;
+                    }
+                }
+                .img-wrap {
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                }
+            }
+            .slider-caption {
+                .img-wrap {
+                    margin-top: -20px;
+                    margin-right: 60px;
+                    img {
+                        margin-right: -80px;
+                    }
+                    .rotate-img-1 {
+                        z-index: 3;
+                        animation-delay: 1.5s;
+                    }
+                    .rotate-img-2 {
+                        z-index: 2;
+                        animation-delay: 1s;
+                    }
+                    .rotate-img-3 {
+                        z-index: 1;
+                        animation-delay: 0.5s;
+                    }
+                }
+                // CSS ANIMATION - Slide 1
+                // First text - h1
+                .rotate-in-down-right {
+                    animation-delay: 2.4s;
+                    animation-duration: 0.5s;
+                    animation-fill-mode: both;
+                    animation-name: rotateInDownRight;
+                }
+                @keyframes rotateInDownRight {
+                    0% {
+                        transform-origin: right bottom;
+                        transform: rotate3d(0, 0, 1, 45deg);
+                        opacity: 0;
+                    }
+                    100% {
+                        transform-origin: right bottom;
+                        transform: none;
+                        opacity: 1;
+                    }
+                }
+                // Second text - h2
+                .bounce-in-left-1,
+                .bounce-in-left-2 {
+                    animation-delay: 2.6s;
+                    animation-duration: 2s;
+                    animation-fill-mode: both;
+                    animation-name: bounceInLeft;
+                }
+                .bounce-in-left-2 {
+                    animation-delay: 2.8s;
+                }
+                @keyframes bounceInLeft {
+                    0%, 60%, 75%, 90%, 100% {
+                        transition-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1.000);
+                    }
+                    0% {
+                        opacity: 0;
+                        transform: translate3d(-3000px, 0, 0);
+                    }
+                    60% {
+                    opacity: 1;
+                    transform: translate3d(25px, 0, 0);
+                    }
+                    75% {
+                    transform: translate3d(-10px, 0, 0);
+                    }
+                    90% {
+                    transform: translate3d(5px, 0, 0);
+                    }
+                    100% {
+                    transform: none;
+                    }
+                }
+                // CSS ANIMATION
+                // Images animation
+                .rotateIn {
+                    animation-duration: 1s;
+                    animation-name: rotateIn;
+                    animation-fill-mode: both;
+                }
+                @keyframes rotateIn {
+                    0% {
+                        transform-origin: center;
+                        transform: rotate3d(0, 0, 1, -200deg);
+                        opacity: 0;
+                    }
+                    100% {
+                        transform-origin: center;
+                        transform: none;
+                        opacity: 1;
+                    }
+                }
+            }
+            .slider-imgs {
+                flex-direction: column;
+                .img-wrap {
+                    z-index: 2;
+                    margin-bottom: -95px;
+                    img {
+                        margin: 0 10px;
+                    }
+                    .img-shelf {
+                        z-index: 1;
+                    }
+                }
+                // CSS ANIMATION - Slide 2
+                .slide-in-left {
+                    animation-name: slideInLeft;
+                    animation-duration: 1s;
+                    animation-fill-mode: both;
+                }
+                @keyframes slideInLeft {
+                    0% {
+                        transform: translateX(-100%);
+                        visibility: visible;
+                    }
+                    100% {
+                        transform: translateX(0);
+                    }
+                }
+                .slide-in-down {
+                    animation-name: slideInDown;
+                    animation-duration: 1s;
+                    animation-fill-mode: both;
+                }
+                @keyframes slideInDown {
+                    0% {
+                        transform: translateY(-100%);
+                        visibility: visible;
+                    }
+                    100% {
+                        transform: translateY(0);
+                    }
+                }
+                .slide-in-right {
+                    animation-name: slideInRight;
+                    animation-duration: 1s;
+                    animation-fill-mode: both;
+                }
+                @keyframes slideInRight {
+                    0% {
+                        transform: translateX(100%);
+                        visibility: visible;
+                    }
+                    100% {
+                        transform: translateX(0);
+                    }
+                }
+                // Shelf
+                .slide-in-up {
+                    animation-name: slideInUp;
+                    animation-duration: 1s;
+                    animation-fill-mode: both;
+                }
+                @keyframes slideInUp {
+                    0% {
+                        transform: translateY(100%);
+                        visibility: visible;
+                    }
+                    100% {
+                        transform: translateY(0);
+                    }
+                }
+            }
+            // Slick arrows
+            .slick-arrow {
+                opacity: 0;
+                width: 20px;
+                height: 20px;
+                display: block;
+                padding: 20px;
+                background: url("https://img.icons8.com/ios-filled/50/000000/circled-chevron-right.png");
+                background-repeat: no-repeat;
+                background-size: cover;
+                transition: all 0.3s ease;
+                &:hover {
+                    opacity: 1;
+                }
 
+                &::before,
+                &::after {
+                    display: none;
+                }
+                &.slick-next {
+                    right: -37px;
+                }
+                &.slick-prev {
+                    left: -37px;
+                    transform: rotate(180deg);
+                }
+            }
+        }
     }
 }
 
@@ -77,11 +313,9 @@ body {
 // last-section
 .wrapper {
     background: url('./images/bg_brick.jpg');
-
     padding-bottom: 50px;
 }
 .last-section {
-    
     display: flex;
     justify-content: space-around;
     @media screen and (max-width: 576px) {
@@ -98,7 +332,7 @@ body {
         }
         &-inner {
             // width: 300px;
-            display: flex; 
+            display: flex;
             justify-content: space-between;
             align-items: center;
             position: relative;
@@ -128,15 +362,15 @@ body {
 }
 
 
-// footer 
+// footer
 .footer {
     background-color: aliceblue;
     &-inner {
-        // footer 
+        // footer
         display: flex;
         justify-content: space-around;
         align-items: center;
-        
+
         @media screen and (max-width: 576px) {
             display: flex;
             flex-direction: column;
@@ -144,7 +378,7 @@ body {
         &-block {
             display: flex;
             flex-direction: column;
-           
+
             .teli {
                 position: relative;
                 &::after{
@@ -163,7 +397,7 @@ body {
             .malumot {
                 font-size: 30px;
                 color: blue;
-            } 
+            }
            .telegramm {
                display: flex;
                justify-content: space-between;
@@ -196,6 +430,6 @@ body {
             margin-top: 30px;
 
         }
-        
+
     }
-} 
+}
