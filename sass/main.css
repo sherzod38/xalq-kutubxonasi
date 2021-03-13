@@ -39,14 +39,40 @@ h1, h2, h3, h4, h5, h6, p {
   height: 70px;
   border: 1px solid #000;
   border-radius: 7px;
+  position: absolute;
   margin-bottom: 20px;
-  margin-top: 20px;
-  margin-bottom: 10px;
-  margin-top: 10px;
+  top: 80px;
+}
+
+@media screen and (max-width: 576px) {
+  .header-top img {
+    width: 150px;
+    height: 70px;
+    border: 1px solid #000;
+    border-radius: 7px;
+    position: inherit;
+    margin-bottom: 10px;
+    margin-top: 10px;
+  }
 }
 
 .header-midl {
   background-color: #27AE61;
+  position: fixed;
+  /* Set the navbar to fixed position */
+  top: 0;
+  /* Position the navbar at the top of the page */
+  width: 100%;
+  z-index: 1;
+}
+
+@media screen and (max-width: 576px) {
+  .header-midl {
+    position: relative;
+    top: auto;
+    /* Position the navbar at the top of the page */
+    width: auto;
+  }
 }
 
 .header-midl-nav {
@@ -861,7 +887,7 @@ h1, h2, h3, h4, h5, h6, p {
   height: 20px;
   padding-left: 10px;
   background-repeat: no-repeat;
-  right: 0px;
+  right: 15px;
 }
 
 .footer-inner-block .malumot {
@@ -885,13 +911,39 @@ h1, h2, h3, h4, h5, h6, p {
   transition: all ease 0.5s;
   color: #000;
   font-weight: bold;
-  padding: 5px 10px;
+  padding: 12px 16px;
 }
 
 .footer-inner-block a:hover {
   color: #000;
   background-color: #e4e3e2;
   border-radius: 24px;
+}
+
+.footer-inner-block-dropdown {
+  position: relative;
+}
+
+.footer-inner-block-dropdown:hover .footer-inner-block-dropdown-content {
+  display: block;
+}
+
+.footer-inner-block-dropdown-content {
+  display: none;
+  position: absolute;
+  top: -259px;
+  background-color: #f1f1f1;
+  min-width: 160px;
+  -webkit-box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+          box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+}
+
+.footer-inner-block-dropdown-content a {
+  display: block;
+  margin: 0;
+  color: black;
+  padding: 12px 16px;
 }
 
 .footer-inner img {
