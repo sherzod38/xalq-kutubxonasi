@@ -615,9 +615,12 @@ h1, h2, h3, h4, h5, h6, p {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   -ms-flex-pack: distribute;
       justify-content: space-around;
-  padding-top: 20px;
 }
 
 @media screen and (max-width: 576px) {
@@ -653,11 +656,11 @@ h1, h2, h3, h4, h5, h6, p {
 }
 
 .section1 .wrapper2 p {
-  width: 600px;
+  width: 1000px;
   font-size: 20px;
   font-weight: bolder;
   padding-left: 15px;
-  margin-bottom: 20px;
+  margin-bottom: 30px;
   color: #1a1aa5;
 }
 
@@ -678,6 +681,14 @@ h1, h2, h3, h4, h5, h6, p {
   color: #2600ff;
 }
 
+.section1 .wrapper3 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
 @media screen and (max-width: 576px) {
   .section1 .wrapper3 {
     display: -webkit-box;
@@ -694,6 +705,8 @@ h1, h2, h3, h4, h5, h6, p {
 }
 
 .section1 .wrapper3 video {
+  width: 450px;
+  margin-bottom: 20px;
   border: none;
   outline: none;
 }
