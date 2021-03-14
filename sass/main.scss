@@ -412,10 +412,10 @@ h1, h2, h3, h4, h5, h6, p {
                 display: flex;
                 flex-direction: column;
                 width: 300px;
-                
+                font-size: 14px;
             }
             width: 1000px;
-            font-size: 14px;
+            font-size: 17px;
             font-weight: bolder;
             padding-left: 16px;
             // padding-bottom: 15px;
@@ -536,6 +536,9 @@ h1, h2, h3, h4, h5, h6, p {
 
             &-title {
                 font-size: 30px;
+                @media screen and (max-width: 576px) {
+                    text-align: center;
+                }
             }
 
             .teli {

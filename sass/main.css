@@ -658,7 +658,7 @@ h1, h2, h3, h4, h5, h6, p {
 
 .section1 .wrapper2 p {
   width: 1000px;
-  font-size: 14px;
+  font-size: 17px;
   font-weight: bolder;
   padding-left: 16px;
   margin-bottom: 30px;
@@ -675,6 +675,7 @@ h1, h2, h3, h4, h5, h6, p {
         -ms-flex-direction: column;
             flex-direction: column;
     width: 300px;
+    font-size: 14px;
   }
 }
 
@@ -851,6 +852,12 @@ h1, h2, h3, h4, h5, h6, p {
 
 .footer-inner-block-title {
   font-size: 30px;
+}
+
+@media screen and (max-width: 576px) {
+  .footer-inner-block-title {
+    text-align: center;
+  }
 }
 
 .footer-inner-block .teli {
