@@ -53,16 +53,13 @@ h1, h2, h3, h4, h5, h6, p {
     }
     &-midl {
         background-color: #27AE61;
-        
-        // overflow: hidden;
-        // background-color: #333;
-        position: fixed; /* Set the navbar to fixed position */
-        top: 0; /* Position the navbar at the top of the page */
+        position: fixed; 
+        top: 0; 
         width: 100%;
         z-index: 1;
         @media screen and (max-width: 576px) {
             position: relative;
-            top: auto; /* Position the navbar at the top of the page */
+            top: auto;
             width: auto
         }
         
@@ -77,16 +74,19 @@ h1, h2, h3, h4, h5, h6, p {
 
             }
             &-drapdown {
-               position: relative;
-               
-               &:hover &-inner {
+                &:hover &-inner {
                    display: block;
-                   height: auto;
-                   transition: all ease 0.5s;
-               }
-               z-index: 1;
+                   height: 186px;
+                   width: 300px;
+                   transform: translateY(10px);
+                }
+                &:active &-inner {
+                   display: block;
+                   height: 186px;
+                   width: 300px;
+                   transform: translateY(10px);
+                }
                 &-link {
-                    
                     margin: 0;
                     text-decoration: none;
                     font-size: 28px;
@@ -97,22 +97,30 @@ h1, h2, h3, h4, h5, h6, p {
                     }
                 }
                 &-inner {
+                    border-radius: 10px;
                     position: absolute;
-                    width: 300px;
+                    width: 0;
                     height: 0;
                     padding: 0;
                     margin: 0;
                     background-color: rgb(5, 201, 5);
-                    display: none;
                     transition: all ease 0.5s;
+                    transform: translateY(0);
+                    overflow: hidden;
                     &-li {
                         padding: 7px 5px;
                         list-style-type: none;
+                        width: 300px;
+                        display: block;
+                        box-sizing: border-box;
                         
                         &-link {
+                            display: block;
+                            width: 100vw;
                             text-decoration: none;
                             color: #fff;
-                            
+                            font-size: 20px;
+                            transition: all ease 1s;
                         }
                         &:hover {
                             background-color: #229955; 
@@ -121,63 +129,17 @@ h1, h2, h3, h4, h5, h6, p {
                     }
                 }
             }
-           &-link {
+            &-link {
                text-decoration: none;
                font-size: 28px;
                padding: 10px 10px;
-               &:hover {
-
-                   background-color: rgb(5, 201, 5);
-
+                &:hover {
                    background-color: #229955; 
-
                    border-radius: 7px;
 
-               }
+                }
             }
-           &-search {
-               cursor: pointer;
-               padding: 5px 50px;
-               background-color: rgb(0, 255, 0);
-               border: none;
-            //    outline: none;
-               border-radius: 16px;
-
-               cursor: pointer; 
-               padding: 30px 100px;
-               background-color: #27AE61;
-               border: none;
-               outline: none;
-               border-radius: 16px; 
-
-               font-size: 28px;
-            //    position: relative;
-               & {
-                //    position: absolute;
-                   background-image: url('./images/icons/loupe.svg');
-                   background-repeat: no-repeat;
-                   background-size: contain;
-                   width: 25px;
-                   height: 25px;
-                   left: 0;
-                   top: 15px; 
-                   display: flex;
-                   align-items: center;
-
-
-
-               }
-               &:hover {
-
-                background-color: rgb(4, 207, 4);
-
-                background-color: rgb(4, 207, 4); 
-                padding: 30px 100px;
-
-               }
-
-
-           }
+           
         }
         
     }
@@ -558,9 +520,11 @@ h1, h2, h3, h4, h5, h6, p {
     background-color: aliceblue;
     &-inner {
         // footer
+        padding-top: 15px;
+        padding-bottom: 100px;
         display: flex;
         justify-content: space-around;
-        align-items: center;
+        // align-items: center;
 
         @media screen and (max-width: 576px) {
             display: flex;
@@ -569,6 +533,10 @@ h1, h2, h3, h4, h5, h6, p {
         &-block {
             display: flex;
             flex-direction: column;
+
+            &-title {
+                font-size: 30px;
+            }
 
             .teli {
                 position: relative;
@@ -588,61 +556,92 @@ h1, h2, h3, h4, h5, h6, p {
             .malumot {
                 font-size: 30px;
                 color: blue;
+                margin-bottom: 10px;
             }
            .telegramm {
                display: flex;
                justify-content: space-between;
            }
 
-            a {
+            .footer-call {
                 // position: relative;
                 text-decoration: none;
-                margin-bottom: 20px;
+                // margin-bottom: 20px;
                 transition: all ease 0.5s;
                 color: #000;
                 font-weight: bold;
                 padding: 12px 16px;
                 &:hover {
                     color: #000;
-                    // transform: translate(15px);
                     background-color: rgb(228, 227, 226);
                     border-radius: 24px;
                 }
             }
             &-dropdown {
-                position: relative;
-
-
-                &:hover &-content {
-                    display: block;
-                }
                 
                 &-content {
-                    display: none;
-                    position: absolute;
-                    top: -259px;
-                    background-color: #f1f1f1;
-                    min-width: 160px;
-                    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-                    z-index: 1;
-                    a {
+                    .d-down {
+                        position: relative;
+                        &:hover &-content {
+                            display: block;
+                            width: 300px;
+                            height: 186px;
+                            transform: translateY(50px);
+                            z-index: 8;
+                        }
+                        &-content {
+                            z-index: 8;
+                            // border-radius: 10px;
+                            position: absolute;
+                            left: -255px;
+                            top: -20px;
+                            width: 0;
+                            height: 0;
+                            // box-shadow: 0 0 5px 10px rgba(0, 0, 0, 0.35);
+                            background-color: aliceblue;
+                            transition: all ease 0.5s;
+                            transform: translateY(40);
+                            overflow: hidden;
+                            &-link {
+                                display: block;
+                                // width: 100vw;
+                                padding: 7px 15px;
+                                text-decoration: none;
+                                color: rgb(0, 0, 0);
+                                font-weight: bold;
+                                font-size: 20px;
+                                transition: all ease 1s;
+                                &:hover {
+                                    background-color: #fff;
+                                    color:  #000;
+                                    padding: 7px 15px;
+                                    font-weight: bold;
+                                }
+                            }
+                        }
+                    }
+                    &-link {
                         display: block;
-                        margin: 0;
-                        color: black;
-                        padding: 12px 16px;
+                        text-decoration: none;
+                        color: #000;
+                        font-weight: bold;
+                        padding: 7px 16px;
+                        &:hover {
+                            color: #000;
+                            background-color: rgb(228, 227, 226);
+                            border-radius: 24px;
+                        }
+
                     }
                 }
             }
         }
         img {
-            // max-width: 100%;
             width: 200px;
             height: 100px;
-            // object-fit: contain;
             border: 1px solid #000;
             border-radius: 7px;
-            margin-bottom: 20px;
-            margin-top: 30px;
+            
 
         }
 

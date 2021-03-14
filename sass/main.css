@@ -59,9 +59,7 @@ h1, h2, h3, h4, h5, h6, p {
 .header-midl {
   background-color: #27AE61;
   position: fixed;
-  /* Set the navbar to fixed position */
   top: 0;
-  /* Position the navbar at the top of the page */
   width: 100%;
   z-index: 1;
 }
@@ -70,7 +68,6 @@ h1, h2, h3, h4, h5, h6, p {
   .header-midl {
     position: relative;
     top: auto;
-    /* Position the navbar at the top of the page */
     width: auto;
   }
 }
@@ -101,16 +98,20 @@ h1, h2, h3, h4, h5, h6, p {
   }
 }
 
-.header-midl-nav-drapdown {
-  position: relative;
-  z-index: 1;
-}
-
 .header-midl-nav-drapdown:hover .header-midl-nav-drapdown-inner {
   display: block;
-  height: auto;
-  -webkit-transition: all ease 0.5s;
-  transition: all ease 0.5s;
+  height: 186px;
+  width: 300px;
+  -webkit-transform: translateY(10px);
+          transform: translateY(10px);
+}
+
+.header-midl-nav-drapdown:active .header-midl-nav-drapdown-inner {
+  display: block;
+  height: 186px;
+  width: 300px;
+  -webkit-transform: translateY(10px);
+          transform: translateY(10px);
 }
 
 .header-midl-nav-drapdown-link {
@@ -126,25 +127,37 @@ h1, h2, h3, h4, h5, h6, p {
 }
 
 .header-midl-nav-drapdown-inner {
+  border-radius: 10px;
   position: absolute;
-  width: 300px;
+  width: 0;
   height: 0;
   padding: 0;
   margin: 0;
   background-color: #05c905;
-  display: none;
   -webkit-transition: all ease 0.5s;
   transition: all ease 0.5s;
+  -webkit-transform: translateY(0);
+          transform: translateY(0);
+  overflow: hidden;
 }
 
 .header-midl-nav-drapdown-inner-li {
   padding: 7px 5px;
   list-style-type: none;
+  width: 300px;
+  display: block;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
 }
 
 .header-midl-nav-drapdown-inner-li-link {
+  display: block;
+  width: 100vw;
   text-decoration: none;
   color: #fff;
+  font-size: 20px;
+  -webkit-transition: all ease 1s;
+  transition: all ease 1s;
 }
 
 .header-midl-nav-drapdown-inner-li:hover {
@@ -159,46 +172,8 @@ h1, h2, h3, h4, h5, h6, p {
 }
 
 .header-midl-nav-link:hover {
-  background-color: #05c905;
   background-color: #229955;
   border-radius: 7px;
-}
-
-.header-midl-nav-search {
-  cursor: pointer;
-  padding: 5px 50px;
-  background-color: lime;
-  border: none;
-  border-radius: 16px;
-  cursor: pointer;
-  padding: 30px 100px;
-  background-color: #27AE61;
-  border: none;
-  outline: none;
-  border-radius: 16px;
-  font-size: 28px;
-}
-
-.header-midl-nav-search {
-  background-image: url("./images/icons/loupe.svg");
-  background-repeat: no-repeat;
-  background-size: contain;
-  width: 25px;
-  height: 25px;
-  left: 0;
-  top: 15px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-}
-
-.header-midl-nav-search:hover {
-  background-color: #04cf04;
-  background-color: #04cf04;
-  padding: 30px 100px;
 }
 
 @media screen and (max-width: 576px) {
@@ -843,14 +818,13 @@ h1, h2, h3, h4, h5, h6, p {
 }
 
 .footer-inner {
+  padding-top: 15px;
+  padding-bottom: 100px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -ms-flex-pack: distribute;
       justify-content: space-around;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
 }
 
 @media screen and (max-width: 576px) {
@@ -875,6 +849,10 @@ h1, h2, h3, h4, h5, h6, p {
           flex-direction: column;
 }
 
+.footer-inner-block-title {
+  font-size: 30px;
+}
+
 .footer-inner-block .teli {
   position: relative;
 }
@@ -893,6 +871,7 @@ h1, h2, h3, h4, h5, h6, p {
 .footer-inner-block .malumot {
   font-size: 30px;
   color: blue;
+  margin-bottom: 10px;
 }
 
 .footer-inner-block .telegramm {
@@ -904,9 +883,8 @@ h1, h2, h3, h4, h5, h6, p {
           justify-content: space-between;
 }
 
-.footer-inner-block a {
+.footer-inner-block .footer-call {
   text-decoration: none;
-  margin-bottom: 20px;
   -webkit-transition: all ease 0.5s;
   transition: all ease 0.5s;
   color: #000;
@@ -914,36 +892,70 @@ h1, h2, h3, h4, h5, h6, p {
   padding: 12px 16px;
 }
 
-.footer-inner-block a:hover {
+.footer-inner-block .footer-call:hover {
   color: #000;
   background-color: #e4e3e2;
   border-radius: 24px;
 }
 
-.footer-inner-block-dropdown {
+.footer-inner-block-dropdown-content .d-down {
   position: relative;
 }
 
-.footer-inner-block-dropdown:hover .footer-inner-block-dropdown-content {
+.footer-inner-block-dropdown-content .d-down:hover .footer-inner-block-dropdown-content .d-down-content {
   display: block;
+  width: 300px;
+  height: 186px;
+  -webkit-transform: translateY(50px);
+          transform: translateY(50px);
+  z-index: 8;
 }
 
-.footer-inner-block-dropdown-content {
-  display: none;
+.footer-inner-block-dropdown-content .d-down-content {
+  z-index: 8;
   position: absolute;
-  top: -259px;
-  background-color: #f1f1f1;
-  min-width: 160px;
-  -webkit-box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
-          box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
-  z-index: 1;
+  left: -255px;
+  top: -20px;
+  width: 0;
+  height: 0;
+  background-color: aliceblue;
+  -webkit-transition: all ease 0.5s;
+  transition: all ease 0.5s;
+  -webkit-transform: translateY(40);
+          transform: translateY(40);
+  overflow: hidden;
 }
 
-.footer-inner-block-dropdown-content a {
+.footer-inner-block-dropdown-content .d-down-content-link {
   display: block;
-  margin: 0;
+  padding: 7px 15px;
+  text-decoration: none;
   color: black;
-  padding: 12px 16px;
+  font-weight: bold;
+  font-size: 20px;
+  -webkit-transition: all ease 1s;
+  transition: all ease 1s;
+}
+
+.footer-inner-block-dropdown-content .d-down-content-link:hover {
+  background-color: #fff;
+  color: #000;
+  padding: 7px 15px;
+  font-weight: bold;
+}
+
+.footer-inner-block-dropdown-content-link {
+  display: block;
+  text-decoration: none;
+  color: #000;
+  font-weight: bold;
+  padding: 7px 16px;
+}
+
+.footer-inner-block-dropdown-content-link:hover {
+  color: #000;
+  background-color: #e4e3e2;
+  border-radius: 24px;
 }
 
 .footer-inner img {
@@ -951,7 +963,5 @@ h1, h2, h3, h4, h5, h6, p {
   height: 100px;
   border: 1px solid #000;
   border-radius: 7px;
-  margin-bottom: 20px;
-  margin-top: 30px;
 }
 /*# sourceMappingURL=main.css.map */
