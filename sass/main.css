@@ -122,7 +122,8 @@ h1, h2, h3, h4, h5, h6, p {
 }
 
 .header-midl-nav-drapdown-link-svg {
-  fill: #50da00;
+  fill: black;
+  padding-top: 10px;
 }
 
 .header-midl-nav-drapdown-link:hover {
