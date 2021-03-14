@@ -125,6 +125,11 @@ h1, h2, h3, h4, h5, h6, p {
   fill: #50da00;
 }
 
+.header-midl-nav-drapdown-link:hover {
+  background-color: #229955;
+  border-radius: 7px;
+}
+
 .header-midl-nav-drapdown-link:hover .header-midl-nav-drapdown-link-svg {
   background-color: #229955;
   border-radius: 7px;

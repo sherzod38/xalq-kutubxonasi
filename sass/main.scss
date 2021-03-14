@@ -95,6 +95,12 @@ h1, h2, h3, h4, h5, h6, p {
                         fill: rgb(80, 218, 0);
                         
                     }
+                    &:hover {
+                        background-color: #229955; 
+                        border-radius: 7px;
+                   
+                        
+                    }
                     &:hover &-svg {
                         background-color: #229955; 
                         border-radius: 7px;
