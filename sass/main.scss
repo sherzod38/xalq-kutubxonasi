@@ -7,7 +7,7 @@ html { box-sizing: border-box; }
 body {
     margin: 0;
     padding: 0;
-    font-family: sans-serif;
+    font-family: 'Open Sans', sans-serif;
 }
 
 h1, h2, h3, h4, h5, h6, p {
@@ -76,9 +76,9 @@ h1, h2, h3, h4, h5, h6, p {
             &-drapdown {
                 &:hover &-inner {
                    display: block;
-                   height: 186px;
+                   height: 205px;
                    width: 300px;
-                   transform: translateY(10px);
+                   transform: translateY(0px);
                 }
                 &:active &-inner {
                    display: block;
@@ -95,7 +95,8 @@ h1, h2, h3, h4, h5, h6, p {
                     padding: 10px 40px;
                     position: relative;
                     @media screen and (max-width: 576px) {
-                        font-size: 22px;
+                        font-size: 18px;
+                        font-weight: bold;
          
                      }
                     &-svg {
@@ -157,8 +158,12 @@ h1, h2, h3, h4, h5, h6, p {
             }
             &-link {
                text-decoration: none;
-               font-size: 28px;
+               font-size: 28px;            
                padding: 10px 10px;
+               @media screen and (max-width: 576px) {
+                    font-size: 22px;
+                    font-weight: bold;
+               }
                 &:hover {
                    background-color: #229955; 
                    border-radius: 7px;
