@@ -87,8 +87,8 @@ h1, h2, h3, h4, h5, h6, p {
                    transform: translateY(10px);
                 }
                 &-link {
-                    // display: flex;
-                    // align-items: center;
+                    display: flex;
+                    align-items: center;
                     margin: 0;
                     text-decoration: none;
                     font-size: 28px;
@@ -96,14 +96,11 @@ h1, h2, h3, h4, h5, h6, p {
                     position: relative;
                     &-svg {
                         fill: rgb(0, 0, 0);
-                        padding-top: 10px ;
-                        position: absolute;
+                        padding-top: 0px ;
                         display: none;
+                        margin-left: 7px;
                         @media screen and (max-width: 576px) {
-                           display: block;
-                           position: absolute;
-                           right: 0;
-                           top: 0;
+                           display: flex;
             
                         }
                         
